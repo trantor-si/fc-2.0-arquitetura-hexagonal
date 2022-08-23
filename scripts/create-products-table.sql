@@ -1,0 +1,1 @@
+create TABLE products (id string, name string, status string, price, float));

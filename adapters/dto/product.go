@@ -17,9 +17,11 @@ func (p *Product) Bind(product *application.Product) (*application.Product, erro
 	if p.ID != "" {
 		product.ID = p.ID
 	}
-	product.Name = p.Name
-	product.Price = p.Price
+
+	product.Name   = p.Name
+	product.Price  = p.Price
 	product.Status = p.Status
+
 	_, err := product.IsValid()
 	if err != nil {
 		return &application.Product{}, err
